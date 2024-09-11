@@ -1,0 +1,32 @@
+.card {
+  width: 80%;
+  height: 80%;
+  background-color: #0d0d0d;
+  display: flex;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.teste {
+  color: whitesmoke;
+}
+
+.example-container {
+  display: flex;
+  width: 100%; /* Acompanha o tamanho do container pai */
+  height: 100%;
+  background-color: #0d0d0d;
+}
+
+.example-sidenav-content {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d0d;
+}
+
+.example-sidenav {
+  width: 200px; /* Define o tamanho da sidebar */
+  background-color: #2e2e2e;
+}
+
