@@ -1,25 +1,32 @@
-<mat-card class="card">
+<mat-drawer-container class="conteudo-pagina" autosize>
 
-  <mat-drawer-container  class="example-container" autosize>
+  <mat-drawer #drawer class="menu-lateral" mode="side">
+    <h3 class="conteudo-menu-lateral">Antedeguemon</h3>
+  </mat-drawer>
 
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+  <div class="navegacao-icone">
+    <input type="checkbox" (click)="drawer.toggle()" />
+    <svg>
+      <use xlink:href="#menu" />
+      <use xlink:href="#menu" />
+    </svg>
+  </div>
 
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Exemplo de item
-      </button>
-    </mat-drawer>
-
-    <div class="teste">
+  <mat-card class="card">
+    <div class="poppins-thin">
       <h1>Eduardo Rodrigues Ramos</h1>
       <h4>Full Stack Developer</h4>
     </div>
 
-    <div class="example-sidenav-content">
-      <img src="https://media.tenor.com/iPKa5SFvaKAAAAAj/touhou-cirno.gif" alt="">
+  </mat-card>
+    <footer style="height: 20px; text-align: center;" class="poppins-thin"><h6>MADE WITH ❤️ BY EDUARDO R. RAMOS</h6></footer>
+</mat-drawer-container>
 
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
-    </div>
-  </mat-drawer-container>
-</mat-card>
+<!-- SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 56" id="menu">
+    <path
+      d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"
+    />
+  </symbol>
+</svg>
