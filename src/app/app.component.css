@@ -1,4 +1,16 @@
+.tratamento-imagem-icone {
+  width: 30px;
+  height: 30px;
+  background: none;
+  display: inline-block;
+}
 
+.icone-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10;
+}
 
 
 
@@ -35,7 +47,8 @@
 }
 
 .menu-lateral {
-  width: 200px; /* Define o tamanho da sidebar */
+  width: 200px;
+  /* Define o tamanho da sidebar */
   background-color: rgb(54, 54, 53);
 }
 
@@ -48,12 +61,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   svg {
     fill: none;
     stroke: var(--color);
     stroke-width: 7px;
     stroke-linecap: round;
     stroke-linejoin: round;
+
     use {
       &:nth-of-type(1) {
         opacity: 1;
@@ -62,11 +77,13 @@
         transition: stroke-dashoffset 0.12s linear 0.2s,
           stroke-dasharray 0.12s linear 0.2s, opacity 0s linear 0.2s;
       }
+
       &:nth-of-type(2) {
         animation: stroke-animation-reverse 1.2s ease-out forwards;
       }
     }
   }
+
   input {
     position: absolute;
     height: 100%;
@@ -74,8 +91,9 @@
     z-index: 2;
     cursor: pointer;
     opacity: 0;
+
     &:checked {
-      + svg {
+      +svg {
         use {
           &:nth-of-type(1) {
             stroke-dashoffset: 175;
@@ -84,6 +102,7 @@
             transition: stroke-dashoffset 0.07s linear 0.07s,
               stroke-dasharray 0.07s linear 0.07s, opacity 0s linear 0.14s;
           }
+
           &:nth-of-type(2) {
             animation: stroke-animation 1.2s ease-out forwards;
           }
@@ -98,14 +117,17 @@
     stroke-dashoffset: 295;
     stroke-dasharray: 25 270;
   }
+
   50% {
     stroke-dashoffset: 68;
     stroke-dasharray: 59 236;
   }
+
   65% {
     stroke-dashoffset: 59;
     stroke-dasharray: 59 236;
   }
+
   100% {
     stroke-dashoffset: 68;
     stroke-dasharray: 59 236;
@@ -117,14 +139,17 @@
     stroke-dashoffset: 68;
     stroke-dasharray: 59 236;
   }
+
   50% {
     stroke-dashoffset: 290;
     stroke-dasharray: 25 270;
   }
+
   65% {
     stroke-dashoffset: 295;
     stroke-dasharray: 25 270;
   }
+
   100% {
     stroke-dashoffset: 290;
     stroke-dasharray: 25 270;
@@ -139,17 +164,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .socials {
     position: fixed;
     display: block;
     left: 20px;
     bottom: 20px;
-    > a {
+
+    >a {
       display: block;
       width: 30px;
       opacity: 0.2;
       transform: scale(var(--scale, 0.8));
       transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+
       &:hover {
         --scale: 1;
       }

@@ -18,15 +18,35 @@
       <h4>Full Stack Developer</h4>
     </div>
 
+    <mat-grid-list cols="1" rowHeight="30px">
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <div class="icone-container">
+          <img class="tratamento-imagem-icone" src="https://img.icons8.com/?size=100&id=71257&format=png&color=000000">
+          <img class="tratamento-imagem-icone"
+            src="https://cdn.iconscout.com/icon/free/png-256/free-csharp-1175240.png?f=webp">
+          <img class="tratamento-imagem-icone"
+            src="https://static-00.iconduck.com/assets.00/dotnet-icon-256x256-ozvjws7o.png">
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="4" rowHeight="100px">
+
+      @for (tile of tiles; track tile) {
+      <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color"> <img
+          src="https://picsum.photos/200/300" alt=""></mat-grid-tile>
+      }
+    </mat-grid-list>
+
   </mat-card>
-    <footer style="height: 20px; text-align: center;" class="poppins-thin"><h6>MADE WITH ❤️ BY EDUARDO R. RAMOS</h6></footer>
+  <footer style="height: 20px; text-align: center;" class="poppins-thin">
+    <h6>MADE WITH ❤️ BY EDUARDO R. RAMOS</h6>
+  </footer>
 </mat-drawer-container>
 
 <!-- SVG -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 56" id="menu">
-    <path
-      d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"
-    />
+    <path d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4" />
   </symbol>
 </svg>
