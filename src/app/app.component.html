@@ -12,33 +12,67 @@
     </svg>
   </div>
 
-  <mat-card class="card">
-    <div class="poppins-thin">
-      <h1>Eduardo Rodrigues Ramos</h1>
-      <h4>Full Stack Developer</h4>
+
+  <div class="titulo">
+    <h1 class="roboto">Eduardo Ramos</h1>
+    <h4 class="roboto">Fullstack Developer</h4>
+  </div>
+
+  <div style="background-color: wheat;">
+    <div class="carousel-container">
+      <ngx-slick-carousel class="carousel" [config]="slideConfig" #slickModal="slick-carousel">
+        <div class="slide" ngxSlickItem *ngFor="let exemplo of images">
+          <img class="tratamento-imagem-icone" [src]="exemplo">
+        </div>
+      </ngx-slick-carousel>
     </div>
+  </div>
+
+  <mat-card class="card">
 
     <mat-grid-list cols="1" rowHeight="30px">
-      <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-grid-tile style="background-color: lime;" [colspan]="1" [rowspan]="1">
         <div class="icone-container">
-          <img class="tratamento-imagem-icone" src="https://img.icons8.com/?size=100&id=71257&format=png&color=000000">
-          <img class="tratamento-imagem-icone"
-            src="https://cdn.iconscout.com/icon/free/png-256/free-csharp-1175240.png?f=webp">
-          <img class="tratamento-imagem-icone"
-            src="https://static-00.iconduck.com/assets.00/dotnet-icon-256x256-ozvjws7o.png">
+          <h5> >ICONES< </h5>
         </div>
       </mat-grid-tile>
     </mat-grid-list>
 
-    <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-list cols="1" rowHeight="30px">
 
-      @for (tile of tiles; track tile) {
-      <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color"> <img
-          src="https://picsum.photos/200/300" alt=""></mat-grid-tile>
-      }
+      <mat-grid-tile style="background-color: lime;" [colspan]="1" [rowspan]="1">
+
+
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="7" rowHeight="500px">
+      <mat-grid-tile style="background-color: blue;" [colspan]="5" [rowspan]="1">
+        <h3 class="roboto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+          laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+          voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+          pariatur?</h3>
+      </mat-grid-tile>
+
+      <mat-grid-tile class="alinhamento-repos" style="background-color: red;" [colspan]="2" [rowspan]="1">
+        <div>
+          <h5 class="roboto"> >EXEMPLO DE REPO 1< </h5>
+              <h5 class="roboto"> >EXEMPLO DE REPO 2< </h5>
+                  <h5 class="roboto"> >EXEMPLO DE REPO 3< </h5>
+        </div>
+      </mat-grid-tile>
+
     </mat-grid-list>
 
   </mat-card>
+
+
   <footer style="height: 20px; text-align: center;" class="poppins-thin">
     <h6>MADE WITH ❤️ BY EDUARDO R. RAMOS</h6>
   </footer>

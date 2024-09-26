@@ -1,3 +1,10 @@
+.titulo {
+  text-align: left;
+  display: flexbox;
+  align-items: flex-start;
+  line-height: 0.2rem;
+}
+
 .tratamento-imagem-icone {
   width: 30px;
   height: 30px;
@@ -12,13 +19,18 @@
   gap: 10;
 }
 
+.alinhamento-repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  pad: 10px;
+}
 
 
 
 
-
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
+.roboto {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #ffffff;

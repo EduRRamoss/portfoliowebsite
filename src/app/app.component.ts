@@ -16,11 +16,36 @@ export class AppComponent {
 
   showFiller = false;
 
-  tiles: Tile[] = [
-    //{ cols: 4, rows: 1, color: 'red' },
-    { cols: 3, rows: 1, color: 'lightblue' },
-    { cols: 1, rows: 2, color: 'lightgreen' },
-    { cols: 1, rows: 1, color: 'lightpink' },
-    { cols: 2, rows: 1, color: '#DDBDF1' },
+
+  images = [
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+    'https://cdn-icons-png.flaticon.com/256/837/837529.png',
+    'https://cdn-icons-png.flaticon.com/256/331/331761.png',
+
   ];
+
+  slideConfig = {
+    slidesToShow: 8,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 1,
+    speed: 10000,
+    dots: false,
+    //cssEase: 'ease-in-out',
+    arrows: false
+  };
+
 }
